@@ -27,10 +27,10 @@
     {{csrf_field()}}
         <h1 style="margin: 0;">Pengeluaran</h1>
         <br>
-      <input type="text" placeholder="Catatan" name="catatan"/>
-      <input type="number" placeholder="total" name="pengeluaran"/>
+      <input type="text" placeholder="Catatan" name="catatan" required/>
+      <input type="number" placeholder="total" name="pengeluaran" required/>
       <div class="row">
-        <div class="col-8"><input type="text" id="output" placeholder="Click Play" name="id"/></div>
+        <div class="col-8"><input type="text" id="output" placeholder="Click Play" name="id" required/></div>
         <div class="col-4" id="create" style="padding-left: 0;"><button type="button">play</button></div>
       </div>     
       <button type="submit">NEXT</button>

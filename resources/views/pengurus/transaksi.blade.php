@@ -83,7 +83,7 @@
             </a>
           </li>
           <li class="p">
-            <a class="nav-link " href="/acakbangku">
+            <a class="nav-link " href="/pengurus/acak">
               <i class="ni ni-bullet-list-67 text-red"></i> Acak Bangku
             </a>
           </li>
@@ -242,7 +242,6 @@
                     <th scope="col">Jumlah Uang</th>
                     <th scope="col">Jenis</th>
                     <th scope="col">Tanggal</th>
-                    <th scope="col">Action</th>
                   </tr>
                 </thead>
                 <tbody>

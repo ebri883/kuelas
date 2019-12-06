@@ -42,7 +42,7 @@ class AuthController extends Controller
 
     public function logout(){
         Auth::logout();
-        return redirect('/login')->with('alert-logout','Berhasil Logout!');
+        return redirect('/')->with('alert-logout','Berhasil Logout!');
     }
 
     public function indexRegister()

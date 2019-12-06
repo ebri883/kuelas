@@ -194,13 +194,13 @@ img {
 }
 
 .btn-secondary {
-  background-color: #cd9557;
-  border-color: #cd9557;
+  background-color: #5e72e4;
+  border-color: #5267dd;
 }
 
 .btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
-  background-color: #ba7c37 !important;
-  border-color: #ba7c37 !important;
+  background-color: #4d62d4 !important;
+  border-color: #4659c9 !important;
 }
 
 .input {

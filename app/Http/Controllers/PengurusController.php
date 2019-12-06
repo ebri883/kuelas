@@ -6,14 +6,16 @@ use Illuminate\Http\Request;
 use App\Transaksi;
 use App\DetailTransaksi;
 use App\DetailUser;
+use App\User;
+use App\Kelas;
 use Auth;
 
 class PengurusController extends Controller
 {
     public function index(){
         $kodeKelas = Auth::user()->detailUser()->first();
+        $kelas = Kelas::where('kode_kelas', $kodeKelas->kode_kelas)->first();
 
-        $user = Auth::user()->detailUser()->get();
         $user1 = DetailUser::where('kode_kelas', $kodeKelas->kode_kelas)
                             ->where('users.absen', '>=', '1')
                             ->join('users', 'detail_users.id_user', '=', 'users.id')
@@ -21,7 +23,7 @@ class PengurusController extends Controller
         $user2 = $user1 -> sortBy('user.absen');
         $kas = DetailTransaksi::where('kode_kelas', $kodeKelas->kode_kelas)->get();
 
-        return view('pengurus.index',['user' => $user, 'user2' => $user2, 'kas' => $kas, ]);
+        return view('pengurus.index',['kelas' => $kelas, 'user2' => $user2, 'kas' => $kas, ]);
     }
 
 
@@ -94,5 +96,43 @@ class PengurusController extends Controller
         $userdetail = DetailUser::where('kode_kelas', $kodeKelas->kode_kelas)->first();
         // dd($userdetail);
         return view('pengurus.profile', ['user' => $userdetail]);
+    }
+
+    public function acak()
+    {
+        return view('pengurus.acak');
+    }
+
+    public function postAcak(Request $req)
+    {
+        $jmlBangku   = $req->jumlahBangku;
+        $jmlBarisHorizontal   = $req->jumlahBaris;
+        $jmlBarisVertical = $jmlBangku / $jmlBarisHorizontal;
+        
+        return view('pengurus.acak', compact(['jmlBangku', 'jmlBarisHorizontal', 'jmlBarisVertical']));
+    }
+
+    public function editprofile()
+    {
+        $kodeKelas = Auth::user()->detailUser()->first();
+        $user = User::where('id', $kodeKelas->id_user)->first();
+        $kelas = Kelas::where('kode_kelas', $kodeKelas->kode_kelas)->first();
+        return view('pengurus.editprofile', ['user' => $user, 'kelas' => $kelas]);
+    }
+
+    public function postEdit(Request $request)
+    {   
+        $auth = Auth::user()->detailUser()->first();
+
+        $user = User::where('id', $auth->id_user)->first();
+        $kelas = Kelas::where('kode_kelas', $auth->kode_kelas)->first();
+
+        $user->nama = $request->nama;
+        $user->absen = $request->absen;
+        $kelas->pengumuman = $request->pengumuman;
+
+        $user->save();
+        $kelas->save();
+        return redirect('/pengurus/profile');
     }
 }

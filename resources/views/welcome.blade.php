@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Coming Soon - Start Bootstrap Theme</title>
+  <title>Quelas - Your Future Classroom</title>
 
   <!-- Bootstrap core CSS -->
   <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -27,7 +27,8 @@
 
   <div class="overlay"></div>
   <!-- <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-    <source src="{{asset('assets/img/brand/logo.png')}}" type="png">
+    <source src="{{asset('assets/img/brand/
+    .png')}}" type="png">
   </video> -->
   <img src="{{asset('assets/img/brand/back.png')}}">
   
@@ -37,13 +38,17 @@
       <div class="row h-100">
         <div class="col-12 my-auto">
           <div class="masthead-content text-white py-5 py-md-0">
-            <h1 class="mb-3">Hi </h1>
-            <p class="mb-5">We're working hard to finish the development of this site. Our target launch date is
-              <strong>January 2019</strong>! Sign up for updates using the form below!</p>
+            <h1 class="mb-3">Hi Pelajar!</h1>
+            <p class="mb-5">Kelola sistem yang ada di kelasmu agar lebih tertata bersama
+              <strong>Quelas</strong>. Ayo segera join bersama kami.</p>
             <div class="input-group input-group-newsletter">
-              <input type="email" class="form-control" placeholder="Enter email..." aria-label="Enter email..." aria-describedby="basic-addon">
-              <div class="input-group-append">
-                <button class="btn btn-secondary" type="button">Notify Me!</button>
+              <div class="input-group">
+                <div>
+                  <a href="/login" class="btn btn-secondary" style="padding: 15px 40px;">Login</a>
+                </div>
+                <div style="margin-left:5%;">
+                  <a href="/register" class="btn btn-secondary" style="margin-left:5%; padding: 15px 40px;">Register</a>
+                </div>
               </div>
             </div>
           </div>
@@ -51,7 +56,7 @@
       </div>
     </div>
   </div>
-
+    
   <!-- Bootstrap core JavaScript -->
   <script src="{{asset('assets/vendor/jquery/jquery.min.js')}}"></script>
   <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>

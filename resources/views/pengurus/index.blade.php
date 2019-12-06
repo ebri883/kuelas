@@ -83,7 +83,7 @@
             </a>
           </li>
           <li class="p">
-            <a class="nav-link " href="/pengurus">
+            <a class="nav-link " href="/pengurus/acak">
               <i class="ni ni-bullet-list-67 text-red"></i> Acak Bangku
             </a>
           </li>
@@ -111,13 +111,11 @@
 <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
       <div class="container-fluid">
         <!-- Brand -->
-        @foreach($user as $u)
         <a class="h4 mb-0 text-uppercase d-none d-lg-inline-block" href="/dashboard">        
         <h1>
-        {{$u->kelas->nama_kelas}}        
+        {{ $kelas->nama_kelas }}        
         </h1>            
         </a>
-        @endforeach
                 <!-- User -->
                 <ul class="navbar-nav align-items-center d-none d-md-flex">
           <li class="nav-item dropdown">
@@ -159,7 +157,7 @@
         <div class="header-body" style="background-color:#92A1F3; border-radius:4px; box-shadow: 0 20px 30px -20px rgba(94,114,228, .2);">
           <!-- Card stats -->
             <p class="gretting text-secondary" style="font-weight:600; margin:0 0 8px 0; letter-spacing: 0.02em; line-height: 150%;">Hallo, {{Auth::user()->nama}}</p>
-            <p class="des text-secondary" style="margin-top:15px; line-height:150%; letter-spacing: 0.03em;" >Selamat Datang Sdr {{Auth::user()->nama}}</p>
+            <p class="des text-secondary" style="margin-top:15px; line-height:150%; letter-spacing: 0.03em;" >{{ $kelas->pengumuman }}</p>
             <img class="ilus-notif" src="./assets/img/brand/notif.png" style="max-height:180px; float:right;">
         </div>
       </div>

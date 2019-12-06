@@ -86,7 +86,7 @@
             </a>
           </li>
           <li class="p">
-            <a class="nav-link " href="/acakbangku">
+            <a class="nav-link " href="/pengurus/acak">
               <i class="ni ni-bullet-list-67 text-red"></i> Acak Bangku
             </a>
           </li>
@@ -217,15 +217,15 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group pt-3 mb-0">
-                        <button class="btn btn-icon btn-3 btn-primary" type="button">
-                          <span class="btn-inner--icon"><i class="ni ni-bag-17"></i></span>
-                          <span class="btn-inner--text">Edit Profil</span>
-                        </button>
+                      <div class="col-md-12">
+                        <div class="form-group pt-3 mb-0">
+                          <a href="/pengurus/profile/edit" class="btn btn-icon btn-3 btn-primary" type="button">
+                            <span class="btn-inner--icon"><i class="ni ni-bag-17"></i></span>
+                            <span class="btn-inner--text">Edit Profil</span>
+                          </a>
+                        </div>
                       </div>
                     </div>
-                  </div>
                 </div>
               </form>
                 

@@ -17,6 +17,7 @@ class CreateKelasTable extends Migration
             $table->bigIncrements('id');
             $table->string('kode_kelas')->unique();
             $table->string('nama_kelas');
+            $table->string('pengumuman')->default('Selamat datang sdr');
             $table->timestamps();
         });
     }

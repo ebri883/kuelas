@@ -83,7 +83,7 @@
             </a>
           </li>
           <li class="p">
-            <a class="nav-link " href="/walikelas">
+            <a class="nav-link " href="/walikelas/acak">
               <i class="ni ni-bullet-list-67 text-red"></i> Acak Bangku
             </a>
           </li>
@@ -111,13 +111,11 @@
 <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
       <div class="container-fluid">
         <!-- Brand -->
-        @foreach($user as $u)
         <a class="h4 mb-0 text-uppercase d-none d-lg-inline-block" href="/dashboard">        
         <h1>
-        {{$u->kelas->nama_kelas}}        
+        {{$kelas->nama_kelas}}        
         </h1>            
         </a>
-        @endforeach
                 <!-- User -->
                 <ul class="navbar-nav align-items-center d-none d-md-flex">
           <li class="nav-item dropdown">
@@ -155,11 +153,13 @@
 
     <!-- Header -->
     <div class="header pb-6" style="background-color: #EDF4F8;">
-      <div class="container-fluid" style="margin-top: 10px;">
+      <div class="container-fluid" style="">
         <div class="header-body" style="background-color:#92A1F3; border-radius:4px; box-shadow: 0 20px 30px -20px rgba(94,114,228, .2);">
           <!-- Card stats -->
             <p class="gretting text-secondary" style="font-weight:600; margin:0 0 8px 0; letter-spacing: 0.02em; line-height: 150%;">Hallo, {{Auth::user()->nama}}</p>
-            <p class="des text-secondary" style="margin-top:15px; line-height:150%; letter-spacing: 0.03em;" >Laporan untuk kelas Anda, wahai Pak/Bu {{Auth::user()->nama}}</p>
+            <p class="des text-secondary" style=" line-height:150%; margin-top: -15px; letter-spacing: 0.03em;" >Laporan untuk kelas Anda, wahai Pak/Bu {{Auth::user()->nama}}</p>
+            <h2 class="gretting text-secondary"> Pengumuman: </h2>
+            <p class="des text-secondary" style="margin-top: -15px;">{{ $kelas->pengumuman }}</p>
             <img class="ilus-notif" src="./assets/img/brand/notif.png" style="max-height:180px; float:right;">
         </div>
       </div>
@@ -292,7 +292,7 @@
         </div>
       </div>
       @if (session('alert-fail'))
-      <div class="alert alert-danger">
+      <div class="alert alert-danger mt-4">
       <button type="button" class="close" data-dismiss="alert">×</button> 
         {{ session('alert-fail') }}
       </div>

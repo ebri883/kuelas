@@ -83,7 +83,7 @@
             </a>
           </li>
           <li class="p">
-            <a class="nav-link " href="/acakbangku">
+            <a class="nav-link " href="/walikelas/acak">
               <i class="ni ni-bullet-list-67 text-red"></i> Acak Bangku
             </a>
           </li>

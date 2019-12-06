@@ -14,9 +14,9 @@
     {{csrf_field()}}
       <h1 style="margin: 0;">Login</h1>
       <br>
-      <input type="email" placeholder="email" name="email"/>
-      <input type="password" placeholder="password"name="password"/>
-      <button>login</button>
+      <input type="email" placeholder="email" name="email" required/>
+      <input type="password" placeholder="password"name="password" required/>
+      <a href="/login"><button>login</button></a>
     </form>
   </div>
 </div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard</title>
+    <title>Register</title>
 <!-- Favicon -->
 <link href="../assets/img/brand/favicon.png" rel="icon" type="image/png">
 
@@ -24,15 +24,15 @@
     {{csrf_field()}}
         <h1 style="margin: 0;">Register</h1>
         <br>
-      <input type="text" placeholder="Full Name" name="nama"/>
-      <input type="email" placeholder="email" name="email"/>
-      <input type="text" placeholder="Class Name" name="nama_kelas"/>
+      <input type="text" placeholder="Full Name" name="nama" required/>
+      <input type="email" placeholder="email" name="email" required/>
+      <input type="text" placeholder="Class Name" name="nama_kelas" required/>
       <div class="row">
-        <div class="col-8"><input type="text" id="output" placeholder="Click Play" name="kode_kelas"/></div>
-        <div class="col-4" id="create" style="padding-left: 0;"><button type="button">random</button></div>
+        <div class="col-8"><input type="text" id="output" placeholder="Click Play" name="kode_kelas" required/></div>
+        <div class="col-4" id="create" style="padding-left: 0;"><button type="button">Play</button></div>
       </div>     
-      <input type="password" placeholder="password"name="password"/>
-      <button type="submit">Register</button>
+      <input type="password" placeholder="password"name="password" required/>
+       <a href="/register"><button type="submit">Register</button></a>
     </form>
   </div>
 </div>
